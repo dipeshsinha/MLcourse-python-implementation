@@ -1,6 +1,5 @@
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
 
 def costFunc(x,y,m,theta):
     temp = np.dot(x,theta) - y
@@ -35,7 +34,7 @@ alpha = 0.01
 num_iter = 400
 theta = np.zeros((3,1))
 y = y[:,np.newaxis]
-
+print(theta)
 theta = gradient(x,y,theta,alpha,num_iter)
 
 cost = costFunc(x,y,m,theta)
